@@ -1,0 +1,38 @@
+{
+    "name": "qlimix/code-standard",
+    "type": "composer-plugin",
+    "license": "LGPL-3.0-only",
+    "authors": [
+        {
+            "name": "frank",
+            "email": "frank@qlimix.net"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "composer-plugin-api": "^1.1",
+        "phpmd/phpmd": "^2.6",
+        "phpro/grumphp": "^0.14.3",
+        "phpstan/phpstan": "^0.10.6",
+        "qlimix/codesniffer-standard": "dev-master"
+    },
+    "suggest": {
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Qlimix\\CodeStandard\\": "src/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:qlimix/codesniffer-standard.git"
+        }
+    ],
+    "extra": {
+        "class": "Qlimix\\CodeStandard\\Composer\\CodeStandardPluginInstaller"
+    }
+}

@@ -1,0 +1,21 @@
+parameters:
+  git_dir: .
+  bin_dir: vendor/bin
+  stop_on_failure: false
+  ignore_unstaged_changes: false
+  ascii: ~
+  tasks:
+    phpcs:
+      standard: Qlimix
+    phpmd:
+      ruleset: ['vendor/qlimix/code-standard/src/MessDetection/ruleset.xml']
+    phpstan:
+      level: 7
+      ignore_patterns:
+        - "*/spec/*"
+        - "*/tests/*"
+        - "*/app/*"
+        - "*/config/*"
+        - "*/public/*"
+        - "*/bin/*"
+        - "*/docs/*"
