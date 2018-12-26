@@ -6,7 +6,6 @@ parameters:
   ascii: ~
   tasks:
     phpcs:
-      standard: Qlimix
     phpmd:
       ruleset: ['vendor/qlimix/code-standard/src/MessDetection/ruleset.xml']
     phpstan:
