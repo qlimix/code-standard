@@ -11,10 +11,10 @@ parameters:
     phpstan:
       level: 7
       ignore_patterns:
-        - "*/spec/*"
-        - "*/tests/*"
-        - "*/app/*"
-        - "*/config/*"
-        - "*/public/*"
-        - "*/bin/*"
-        - "*/docs/*"
+        - "spec"
+        - "tests"
+        - "app"
+        - "config"
+        - "public"
+        - "bin"
+        - "docs"
