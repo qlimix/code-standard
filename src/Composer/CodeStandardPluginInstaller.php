@@ -39,17 +39,13 @@ final class CodeStandardPluginInstaller implements PluginInterface, EventSubscri
     public function runScheduledTasks(Event $event)
     {
         $path = getcwd().'/vendor/qlimix/code-standard';
-        
-        try {
-            if (!file_exists(getcwd().'/grumphp.yml')) {
-                $event->getIO()->write('<fg=green>Copy grumphp config to project root</fg=green>');
-                copy($path.'/resources/grumphp.yml.dist', getcwd().'/grumphp.yml');
-            }
 
-            if (!file_exists(getcwd().'/phpcs.xml.dist')) {
-                $event->getIO()->write('<fg=green>Copy phpcs config to project root</fg=green>');
-                copy($path.'/resources/phpcs.xml.dist', getcwd().'/phpcs.xml.dist');
-            }
+        try {
+            $event->getIO()->write('<fg=green>Copy grumphp config to project root</fg=green>');
+            copy($path.'/resources/grumphp.yml.dist', getcwd().'/grumphp.yml');
+
+            $event->getIO()->write('<fg=green>Copy phpcs config to project root</fg=green>');
+            copy($path.'/resources/phpcs.xml.dist', getcwd().'/phpcs.xml.dist');
         } catch (Throwable $exception) {
             $event->getIO()->writeError('<fg=red>'.$exception->getMessage().'</fg=red>');
             return;
