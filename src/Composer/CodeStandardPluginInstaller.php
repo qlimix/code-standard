@@ -46,6 +46,9 @@ final class CodeStandardPluginInstaller implements PluginInterface, EventSubscri
 
             $event->getIO()->write('<fg=green>Copy phpcs config to project root</fg=green>');
             copy($path.'/resources/phpcs.xml.dist', getcwd().'/phpcs.xml.dist');
+
+            $event->getIO()->write('<fg=green>Copy phpunit config to project root</fg=green>');
+            copy($path.'/resources/phpunit.xml.dist', getcwd().'/phpunit.xml.dist');
         } catch (Throwable $exception) {
             $event->getIO()->writeError('<fg=red>'.$exception->getMessage().'</fg=red>');
             return;
