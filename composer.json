@@ -34,5 +34,8 @@
     },
     "extra": {
         "class": "Qlimix\\CodeStandard\\Composer\\CodeStandardPluginInstaller"
+    },
+    "require-dev": {
+        "vimeo/psalm": "^3.8"
     }
 }
