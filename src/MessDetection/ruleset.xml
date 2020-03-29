@@ -28,16 +28,6 @@
         <exclude name="ShortVariable" />
         <exclude name="LongVariable" />
     </rule>
-    <rule ref="rulesets/naming.xml/LongVariable">
-        <properties>
-            <property name="maximum" value="36"/>
-        </properties>
-    </rule>
-    <rule ref="rulesets/naming.xml/ShortVariable">
-        <properties>
-            <property name="exceptions" value="id" />
-        </properties>
-    </rule>
 
     <rule ref="rulesets/unusedcode.xml">
         <exclude name="UnusedFormalParameter"/>
