@@ -1,3 +1,14 @@
+## 2.0.2 - 29-03-2020
+
+Changes:
+ - ignore short name method phpmd rule
+ - removed CouplingBetweenObjects exclusion from phpmd ruleset
+ 
+## 2.0.1 - 29-03-2020
+
+Changes:
+ - ignore short name variable phpmd rule
+ 
 ## 2.0.0 - 17-01-2020
 
 New feature:
