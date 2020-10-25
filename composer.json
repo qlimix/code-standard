@@ -19,9 +19,9 @@
         "composer-plugin-api": "^2.0",
         "php-coveralls/php-coveralls": "^2.2",
         "phpmd/phpmd": "^2.8",
-        "phpro/grumphp": "0.18.*",
+        "phpro/grumphp": "^1.0",
         "phpstan/phpstan": "^0.12",
-        "phpunit/phpunit": "^8.5",
+        "phpunit/phpunit": "^9.4",
         "qlimix/codesniffer-standard": "^3.0"
     },
     "config": {
