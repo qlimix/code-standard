@@ -22,7 +22,8 @@
         "phpro/grumphp": "^1.0",
         "phpstan/phpstan": "^0.12",
         "phpunit/phpunit": "^9.4",
-        "qlimix/codesniffer-standard": "^3.0"
+        "qlimix/codesniffer-standard": "^3.0",
+        "vimeo/psalm": "^4.0"
     },
     "config": {
         "sort-packages": true
