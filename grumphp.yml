@@ -2,4 +2,4 @@ parameters:
     git_dir: .
     bin_dir: vendor/bin
     ascii: ~
-    tasks: {  }
+    tasks: {}
