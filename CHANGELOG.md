@@ -1,3 +1,10 @@
+## 2.0.3 - 01-11-2020
+
+Compatibility:
+ - Updated to be compatible with composer 2.0
+ - Locked grumphp to 0.18.* to prevent required config changes and be compatible with composer 2.0
+ - Codesniffer standard upgrade for composer 2.0 compatibility
+
 ## 2.0.2 - 29-03-2020
 
 Changes:
