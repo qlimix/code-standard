@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Qlimix\CodeStandard\Composer;
+namespace Qlimix\CodeStandard;
 
 final class CodeStandardConfig
 {

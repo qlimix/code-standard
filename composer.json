@@ -1,6 +1,6 @@
 {
     "name": "qlimix/code-standard",
-    "type": "composer-plugin",
+    "type": "library",
     "description": "Qlimix code standard",
     "license": "MIT",
     "keywords": [
@@ -16,8 +16,6 @@
     ],
     "require": {
         "php": ">7.4",
-        "composer-plugin-api": "^2.0",
-        "composer/composer": "^2.0",
         "php-coveralls/php-coveralls": "^2.4",
         "phpmd/phpmd": "^2.8",
         "phpro/grumphp": "^1.0",
@@ -29,12 +27,10 @@
     "config": {
         "sort-packages": true
     },
+    "bin": ["bin/q-codestandard-defaults.php"],
     "autoload": {
         "psr-4": {
             "Qlimix\\CodeStandard\\": "src/"
         }
-    },
-    "extra": {
-        "class": "Qlimix\\CodeStandard\\Composer\\CodeStandardPluginInstaller"
     }
 }
