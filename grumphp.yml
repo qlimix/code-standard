@@ -1,3 +1,5 @@
 grumphp:
-    ascii: ~
+    ascii:
+        succeeded: ~
+        failed: ~
     tasks: {}
