@@ -1,6 +1,13 @@
 #!/usr/bin/env php
 <?php declare(strict_types=1);
 
+$autoLoaderPath = getcwd().DIRECTORY_SEPARATOR.'vendor'.DIRECTORY_SEPARATOR.'autoloader.php';
+if (!file_exists($autoLoaderPath)) {
+    echo 'Can\'t find composer autoloader';
+}
+
+require $autoLoaderPath;
+
 use Qlimix\CodeStandard\CodeStandardConfig;
 
 function writeConfig(CodeStandardConfig $config): void
