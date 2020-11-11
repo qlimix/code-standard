@@ -1,9 +1,9 @@
-parameters:
-  git_dir: .
-  bin_dir: vendor/bin
+grumphp:
   stop_on_failure: false
   ignore_unstaged_changes: false
-  ascii: ~
+  ascii:
+    failed: ~
+    succeeded: ~
   tasks:
     phpcs:
     phpmd:
@@ -18,3 +18,12 @@ parameters:
         - "public"
         - "bin"
         - "docs"
+    psalm:
+      config: psalm.xml
+      ignore_patterns: []
+      no_cache: false
+      report: ~
+      output_format: null
+      threads: 1
+      triggered_by: ['php']
+      show_info: false

@@ -1,0 +1,47 @@
+#!/usr/bin/env php
+<?php declare(strict_types=1);
+
+$autoLoaderPath = getcwd().DIRECTORY_SEPARATOR.'vendor'.DIRECTORY_SEPARATOR.'autoload.php';
+if (!file_exists($autoLoaderPath)) {
+    echo 'Can\'t find composer autoloader';
+}
+
+require $autoLoaderPath;
+
+use Qlimix\CodeStandard\CodeStandardConfig;
+
+function writeConfig(CodeStandardConfig $config): void
+{
+    if (copy($config->getResourcePath(), $config->getDestinationPath()) === false) {
+        throw new RuntimeException('Failed to copy config');
+    }
+}
+
+$path = getcwd().'/vendor/qlimix/code-standard';
+
+$configs = [
+    new CodeStandardConfig(
+        'GrumPHP',
+        $path.'/resources/grumphp.yml.dist',
+        getcwd().'/grumphp.yml'
+    ),
+    new CodeStandardConfig(
+        'PHPCS',
+        $path.'/resources/phpcs.xml.dist',
+        getcwd().'/phpunit.xml'
+    ),
+    new CodeStandardConfig(
+        'PHPUnit',
+        $path.'/resources/phpcs.xml.dist',
+        getcwd().'/phpcs.xml'
+    ),
+    new CodeStandardConfig(
+        'Psalm',
+        $path.'/resources/psalm.xml.dist',
+        getcwd().'/psalm.xml'
+    ),
+];
+
+foreach ($configs as $config) {
+    writeConfig($config);
+}
