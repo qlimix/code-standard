@@ -27,7 +27,7 @@
     "config": {
         "sort-packages": true
     },
-    "bin": ["bin/q-codestandard-defaults.php"],
+    "bin": ["bin/q-codestandard-defaults"],
     "autoload": {
         "psr-4": {
             "Qlimix\\CodeStandard\\": "src/"
