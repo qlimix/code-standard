@@ -42,6 +42,6 @@ $configs = [
     ),
 ];
 
-foreach ($this->configs as $config) {
+foreach ($configs as $config) {
     writeConfig($config);
 }
