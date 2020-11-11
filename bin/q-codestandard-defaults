@@ -17,7 +17,7 @@ function writeConfig(CodeStandardConfig $config): void
     }
 }
 
-$path = getcwd().'/../qlimix/code-standard';
+$path = getcwd().'/vendor/qlimix/code-standard';
 
 $configs = [
     new CodeStandardConfig(
