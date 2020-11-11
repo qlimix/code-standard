@@ -50,12 +50,12 @@ final class CodeStandardPluginInstaller implements PluginInterface, EventSubscri
             new CodeStandardConfig(
                 'PHPUnit',
                 $path.'/resources/phpcs.xml.dist',
-                getcwd().'/phpcs.yml'
+                getcwd().'/phpcs.xml'
             ),
             new CodeStandardConfig(
                 'Psalm',
                 $path.'/resources/psalm.xml.dist',
-                getcwd().'/psalm.yml'
+                getcwd().'/psalm.xml'
             ),
         ];
     }
