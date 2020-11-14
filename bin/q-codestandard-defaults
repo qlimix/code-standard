@@ -27,7 +27,7 @@ $configs = [
     ),
     new CodeStandardConfig(
         'PHPCS',
-        $path.'/resources/phpcs.xml.dist',
+        $path.'/resources/phpunit.xml.dist',
         getcwd().'/phpunit.xml'
     ),
     new CodeStandardConfig(
