@@ -1,4 +1,4 @@
-## 3.0.1 - 14-11-2020
+## 3.0.2 - 14-11-2020
 
 ## Strictness
  - made default Psalm more strict
