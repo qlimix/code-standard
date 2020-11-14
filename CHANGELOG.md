@@ -1,4 +1,11 @@
 ## 3.0.1 - 14-11-2020
+
+## Strictness
+ - made default Psalm more strict
+ 
+## 3.0.1 - 14-11-2020
+
+## Bug fixes
  - copy to correct file bug fix
 
 ## 3.0.0 - 11-11-2020
