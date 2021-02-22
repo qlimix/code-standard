@@ -1,3 +1,8 @@
+## 3.0.3 - 22-02-2021
+
+### PHPUnit
+ - update deprecated schema
+
 ## 3.0.2 - 14-11-2020
 
 ## Strictness
