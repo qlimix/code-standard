@@ -12,8 +12,8 @@ use Qlimix\CodeStandard\CodeStandardConfig;
 
 function writeConfig(CodeStandardConfig $config): void
 {
-    if (copy($config->getResourcePath(), $config->getDestinationPath()) === false) {
-        throw new RuntimeException('Failed to copy config');
+    if (copy($config->sourcePath, $config->destinationPath) === false) {
+        throw new RuntimeException(sprintf('Failed to copy config %s', $config->name));
     }
 }
 
