@@ -15,17 +15,21 @@
         }
     ],
     "require": {
-        "php": ">7.4",
-        "php-coveralls/php-coveralls": "^2.4",
-        "phpmd/phpmd": "^2.8",
-        "phpro/grumphp": "^1.0",
-        "phpstan/phpstan": "^0.12",
-        "phpunit/phpunit": "^9.4",
-        "qlimix/codesniffer-standard": "^3.0",
-        "vimeo/psalm": "^4.0"
+        "php": ">=8.4",
+        "php-coveralls/php-coveralls": "^2.7",
+        "phpmd/phpmd": "^2.15 || ^3.0",
+        "phpro/grumphp": "^2.0",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^13.0",
+        "qlimix/codesniffer-standard": "^5.0",
+        "vimeo/psalm": "^7.0"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "phpro/grumphp": true
+        }
     },
     "bin": ["bin/q-codestandard-defaults"],
     "autoload": {
