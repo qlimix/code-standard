@@ -3,7 +3,8 @@
 
 $autoLoaderPath = getcwd().DIRECTORY_SEPARATOR.'vendor'.DIRECTORY_SEPARATOR.'autoload.php';
 if (!file_exists($autoLoaderPath)) {
-    echo 'Can\'t find composer autoloader';
+    fwrite(STDERR, 'Can\'t find composer autoloader'.PHP_EOL);
+    exit(1);
 }
 
 require $autoLoaderPath;
@@ -12,13 +13,21 @@ use Qlimix\CodeStandard\CodeStandardConfig;
 
 function writeConfig(CodeStandardConfig $config): void
 {
-    if (copy($config->getResourcePath(), $config->getDestinationPath()) === false) {
-        throw new RuntimeException('Failed to copy config');
+    if (file_exists($config->getDestinationPath())) {
+        echo $config->getName().': '.$config->getDestinationPath().' exists, skipped'.PHP_EOL;
+        return;
     }
+
+    if (copy($config->getResourcePath(), $config->getDestinationPath()) === false) {
+        throw new RuntimeException('Failed to copy '.$config->getName().' config');
+    }
+
+    echo $config->getName().': wrote '.$config->getDestinationPath().PHP_EOL;
 }
 
 $path = getcwd().'/vendor/qlimix/code-standard';
 
+// the .dist files are the shared project configs; phpunit.xml, phpcs.xml and psalm.xml stay free for local overrides
 $configs = [
     new CodeStandardConfig(
         'GrumPHP',
@@ -27,18 +36,18 @@ $configs = [
     ),
     new CodeStandardConfig(
         'PHPCS',
-        $path.'/resources/phpunit.xml.dist',
-        getcwd().'/phpunit.xml'
+        $path.'/resources/phpcs.xml.dist',
+        getcwd().'/phpcs.xml.dist'
     ),
     new CodeStandardConfig(
         'PHPUnit',
-        $path.'/resources/phpcs.xml.dist',
-        getcwd().'/phpcs.xml'
+        $path.'/resources/phpunit.xml.dist',
+        getcwd().'/phpunit.xml.dist'
     ),
     new CodeStandardConfig(
         'Psalm',
         $path.'/resources/psalm.xml.dist',
-        getcwd().'/psalm.xml'
+        getcwd().'/psalm.xml.dist'
     ),
 ];
 

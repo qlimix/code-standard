@@ -6,6 +6,9 @@ grumphp:
     succeeded: ~
   tasks:
     phpcs:
+      standard: phpcs.xml.dist
+      # the Qlimix standard excludes */tests/*, so a commit touching only tests would leave phpcs without files
+      whitelist_patterns: ['/^src\/(.*)/']
     phpmd:
       ruleset: ['vendor/qlimix/code-standard/src/MessDetection/ruleset.xml']
     phpstan:
@@ -19,7 +22,7 @@ grumphp:
         - "bin"
         - "docs"
     psalm:
-      config: psalm.xml
+      config: psalm.xml.dist
       ignore_patterns: []
       no_cache: false
       report: ~
