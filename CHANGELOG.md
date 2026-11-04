@@ -1,3 +1,8 @@
+## 4.0.1 - 04-11-2026
+
+### Dependencies
+ - allow qlimix/codesniffer-standard ^6.0
+
 ## 4.0.0 - 04-11-2026
 
 ### Dependencies
